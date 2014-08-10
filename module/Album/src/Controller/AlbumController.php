@@ -2,12 +2,11 @@
 
 namespace Album\Controller;
 
-use Zend\Mvc\Controller\ActionController,
-    Zend\View\Model\ViewModel;
+use Zend\Mvc\Controller\AbstractActionController;
+use Zend\View\Model\ViewModel;
 
-class AlbumController extends ActionController
+class AlbumController extends AbstractActionController
 {
-
     protected $albumTable;
 
     public function indexAction()
@@ -33,9 +32,8 @@ class AlbumController extends ActionController
     {
         if (!$this->albumTable) {
             $sm = $this->getServiceLocator();
-            $this->albumTable = $sm->get('album-table');
+            $this->albumTable = $sm->get('Album\Model\AlbumTable');
         }
         return $this->albumTable;
     }
-
 }

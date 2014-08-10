@@ -1,23 +1,23 @@
 <?php
 return array(
-    'controller' => array(
-        'classes' => array(
-            'album/album' => 'Album\Controller\AlbumController',
+    'controllers' => array(
+        'invokables' => array(
+            'Album\Controller\Album' => 'Album\Controller\AlbumController',
         ),
     ),
     'router' => array(
         'routes' => array(
             'album' => array(
-                'type' => 'segment',
+                'type'    => 'segment',
                 'options' => array(
-                    'route' => '/album[/:action][/:id]',
+                    'route'    => '/album[/][:action][/:id]',
                     'constraints' => array(
                         'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                        'id' => '[0-9]+',
+                        'id'     => '[0-9]+',
                     ),
                     'defaults' => array(
-                        'controller' => 'album',
-                        'action' => 'index',
+                        'controller' => 'Album\Controller\Album',
+                        'action'     => 'index',
                     ),
                 ),
             ),
@@ -25,7 +25,7 @@ return array(
     ),
     'view_manager' => array(
         'template_path_stack' => array(
-            __DIR__ . '/../view',
+            'album' => __DIR__ . '/../view',
         ),
     ),
 );
