@@ -17,5 +17,20 @@ class IndexController extends AbstractActionController
     public function indexAction()
     {
         return new ViewModel();
+    }	
+    
+    public function bioAction()
+    {
+    	return new ViewModel();
+    }
+    
+    public function tracksAction()
+    {
+    	return new ViewModel();
+    }
+    
+    public function contactAction()
+    {
+    	return new ViewModel();
     }
 }

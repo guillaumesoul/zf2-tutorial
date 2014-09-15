@@ -28,4 +28,14 @@ return array(
             'album' => __DIR__ . '/../view',
         ),
     ),
+	'home' => array(
+			'type' => 'Zend\Mvc\Router\Http\Literal',
+			'options' => array(
+					'route'    => '/',
+					'defaults' => array(
+							'controller' => 'Application\Controller\Album',
+							'action'     => 'index',
+					),
+			),
+	),
 );
