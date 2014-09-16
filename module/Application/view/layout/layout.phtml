@@ -14,7 +14,10 @@
         <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
                         ->prependStylesheet($this->basePath() . '/css/style.css')
                         ->prependStylesheet($this->basePath() . '/css/bootstrap-theme.min.css')
-                        ->prependStylesheet($this->basePath() . '/css/bootstrap.icon-large.min.css')
+                        //->prependStylesheet($this->basePath() . '/css/fontello.css')
+                        //->prependStylesheet($this->basePath() . '/css/animation.css')
+                        //->prependStylesheet($this->basePath() . '/css/fontello-codes.css')
+                        ->prependStylesheet($this->basePath() . '/css/fontello-embedded.css')
                         ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') ?>
 
         <!-- Scripts -->
@@ -40,12 +43,29 @@
                     </button>
                 </div>
                 <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>
-                        <li class="active"><a href="<?php echo $this->url('bio') ?>"><?php echo $this->translate('Bio') ?></a></li>
-                        <li class="active"><a href="<?php echo $this->url('tracks') ?>"><?php echo $this->translate('Tracks') ?></a></li>
-                        <li class="active"><a href="<?php echo $this->url('contact') ?>"><?php echo $this->translate('Contact') ?></a></li>
-                    </ul>
+                    <div class="">
+                        <ul class="nav nav-justified col-md-offset-1">
+                            <li>
+                                <ul class="nav navbar-nav navbar-left">
+                                    <li class=""><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>
+                                    <li class=""><a href="<?php echo $this->url('bio') ?>"><?php echo $this->translate('Bio') ?></a></li>
+                                    <li class=""><a href="<?php echo $this->url('tracks') ?>"><?php echo $this->translate('Tracks') ?></a></li>
+                                    <li class=""><a href="<?php echo $this->url('contact') ?>"><?php echo $this->translate('Contact') ?></a></li>
+                                </ul>
+                            </li>
+                            <li></li>
+                            <li>
+                                <ul class="nav navbar-nav navbar-left">
+                                    <li class=""><a href="<?php echo $this->url('contact') ?>"><?php echo '<span class="icon icon-facebook"></span>' ?></a></li>
+                                    <li class=""><a href="<?php echo $this->url('contact') ?>"><?php echo '<span class="icon icon-twitter"></span>' ?></a></li>
+                                    <li class=""><a href="<?php echo $this->url('contact') ?>"><?php echo '<span class="icon icon-pinterest"></span>' ?></a></li>
+                                    <li class=""><a href="<?php echo $this->url('contact') ?>"><?php echo '<span class="icon icon-youtube"></span>' ?></a></li>
+                                    <li class=""><a href="<?php echo $this->url('contact') ?>"><?php echo '<span class="icon icon-instagramm"></span>' ?></a></li>
+                                    <li class=""><a href="<?php echo $this->url('contact') ?>"><?php echo '<span class="icon icon-mail-squared"></span>' ?></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div><!--/.nav-collapse -->
             </div>
         </nav>
